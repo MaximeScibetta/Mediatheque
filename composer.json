@@ -1,0 +1,10 @@
+{
+    "name": "root/mediatheque",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models/",
+            "Controllers\\": "controllers/"
+        }
+    }
+}

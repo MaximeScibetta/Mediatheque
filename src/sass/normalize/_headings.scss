@@ -1,0 +1,17 @@
+h1{
+        @include rhythm($font-h1, $font-h1*1.5); 
+}
+
+h2{
+            @include rhythm($font-h2, $font-h2*1.5); 
+}
+
+h3{
+        @include rhythm($font-h3, $font-h3*1.5); 
+        margin-top: $sElem;
+}
+
+p{
+            @include rhythm($font-content, $font-content*1.5); 
+            max-width: 650px;
+}

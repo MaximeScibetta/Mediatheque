@@ -1,0 +1,12 @@
+.container{
+    &__item{
+        display: block;
+        &:not(:first-of-type){
+            margin-top: $sElem;
+        }
+        img{
+        max-width: 200px;
+        }
+       
+    }
+}

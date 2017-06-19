@@ -1,0 +1,8 @@
+.container{
+    &:not(:first-of-type){
+        margin-top: $sElem*2;
+    }
+    h2{
+        @include rhythm($font-h2, $font-h2*1.5); 
+    }
+}

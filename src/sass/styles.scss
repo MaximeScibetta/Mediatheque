@@ -1,0 +1,106 @@
+/****settings***/
+@import 'settings/colors';
+@import 'settings/fontFace';
+@import 'settings/global';
+
+/****tools***/
+@import 'tools/buttons';
+@import 'tools/baseline';
+@import 'tools/flexGalery';
+
+/****normalize****/
+@import 'normalize/reset';
+@import 'normalize/submit';
+@import 'normalize/headings';
+@import 'normalize/button';
+@import 'normalize/errorSucces';
+
+/****components***/
+@import 'components/header';
+@import 'components/siteNav';
+@import 'components/artist';
+@import 'components/album';
+@import 'components/favorite';
+@import 'components/log';
+
+/****trumps****/
+@import 'trumps/hideText';
+body{
+    font-family: 'Fira_Sans-Regular';
+    background-color: $dark;
+    color: #FFF;
+    article{
+        section{
+            margin-left: $sElem;
+            &.label_info{
+                img{
+                    display: inline-block;
+                    &+div{}
+                }
+            }
+        }
+        margin-bottom: $sElem*2;
+    }
+}
+
+.connexion, 
+.inscription{
+    margin-left: $sElem;
+    form{
+        label{
+            display: block;
+                margin: $sUnit*3 0 $sUnit/2 0;
+        }
+        input, textarea{
+            border: none;
+            background-color: initial;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid $green;
+            color:#FFF;
+        }
+        fieldset{
+            label{
+                display: inline-block;
+            }
+            input, textarea{
+                &:not(:last-of-type){
+                    margin-right: $sUnit*2;
+                    
+                }
+            }
+        }
+        input[type="submit"]{
+            margin-top: $sUnit*2;
+            padding: 10px;
+            text-transform: uppercase;
+            display: block;
+            &:hover{
+                background-color: $green;
+                color: #000;
+            }
+        }
+        input#spend{
+             margin-top: $sUnit*2;
+            padding: 10px;
+            text-transform: uppercase;
+            display: block;
+            border-color: $red;
+            &:hover{
+                background-color: $red;
+                color: #000;
+            }
+        }
+        input#inscription{
+             margin-top: $sUnit*2;
+            padding: 10px;
+            text-transform: uppercase;
+            display: block;
+            border-color: $yellow;
+            &:hover{
+                background-color: $yellow;
+                color: #000;
+            }
+        }
+    }
+}

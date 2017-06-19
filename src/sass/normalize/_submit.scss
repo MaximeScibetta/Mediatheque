@@ -1,0 +1,7 @@
+button, 
+input[type="submit"]{
+    border: none;
+    background-color: initial;
+    color: #FFF;
+    @include rhythm($font-content, $font-content*1.5); 
+}

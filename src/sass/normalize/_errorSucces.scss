@@ -1,0 +1,29 @@
+.success{
+    margin: $sUnit 0;
+     background-color: $green;
+    padding: $sUnit;
+    display: table;
+    &:before{
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Icon';
+        content: '\ea10';
+        margin-left: $sUnit/2;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.error{
+    margin: $sUnit 0;
+    background-color: $red;
+    padding: $sUnit;
+    display: table;
+    &:before{
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Icon';
+        content: '\ea0f';
+        margin-left: $sUnit/2;
+        transition: all .5s ease-in-out;
+    }
+}

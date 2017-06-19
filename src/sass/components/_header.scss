@@ -1,0 +1,9 @@
+header{
+    color: #FFF;
+    //height: 300px;
+    h1{
+        @include rhythm($font-h1, $font-h1*1.5); 
+        font-family: 'Fira_Sans-SemiBold';
+        margin: $sElem 0 $sElem $sElem;
+    }
+}

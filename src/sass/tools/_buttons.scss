@@ -1,0 +1,22 @@
+@mixin styleButton($padding, $borderColor, $bcgColor, $radius) {
+    padding: $padding;
+    background-color: $bcgColor;
+    border: 1px solid $borderColor;
+    border-radius: $radius;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+}
+
+@mixin hoverButton($bcgColor) {
+    &:hover {
+        background-color: darken($bcgColor, 20%)
+    }
+}
+
+@mixin button($padding, $borderColor, $bcgColor, $radius:5px) {
+    @include styleButton($padding, $borderColor, $bcgColor, $radius);
+    @include hoverButton($bcgColor);
+}

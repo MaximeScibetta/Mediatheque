@@ -1,0 +1,86 @@
+.label{
+    margin-top: $sUnit;
+    padding: 5px;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    &:hover{
+        color: #000;
+        background-color: $yellow;
+        &:after{
+        margin-left: $sUnit;
+        transition: all .5s ease-in-out;
+        }
+    }
+    &:after{
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Icon';
+        content: '\ea1c';
+        margin-left: $sUnit/2;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.more{ 
+    margin-top: $sUnit;
+    padding: 5px;
+    border: 1px solid $green;
+    border-radius: 5px;
+    &:hover{
+        color: #000;
+        background-color: $green;
+        &:after{
+        margin-left: $sUnit;
+        transition: all .5s ease-in-out;
+        }
+    }
+     &:after{
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Icon';
+        content: '\ea0a';
+        margin-left: $sUnit/2;
+        transition: all .5s ease-in-out;
+    }
+  
+}
+
+.add_fav{
+    display: block;
+    margin: $sUnit*2 0 0 0;
+    padding: 10px;
+    border: 1px solid $red;
+    border-radius: 5px;
+    text-align: center;
+    width: 87%;
+    input{
+        text-transform: uppercase;
+    }
+    &:hover{
+        color: #000;
+        background-color: $red;
+    }
+}
+
+ .artist{
+    margin-top: $sUnit;
+    padding: 5px;
+    border: 1px solid $purple;
+    border-radius: 5px;
+    &:hover{
+        //color: #000;
+        background-color: $purple;
+        &:after{
+            margin-left: $sUnit;
+        transition: all .5s ease-in-out;
+        }
+    }
+    &:after{
+        display: inline-block;
+        font-size: 15px;
+        font-family: 'Icon';
+        content: '\ea1c';
+        margin-left: $sUnit/2;
+        transition: all .5s ease-in-out;
+    }
+}
