@@ -6,7 +6,7 @@ use Models\Artist as ArtistModel;
 use Models\Album as AlbumModel;
 use Models\Label as LabelModel;
 
-class Artist extends Controller
+class Artist
 {
     private $artistModel = null;
     private $albumModel = null;
@@ -21,7 +21,6 @@ class Artist extends Controller
 
     public function getAllArtists()
     {
-        //$this->checkLogin();
         if($this->artistModel->indexAllArtists()){
             $artists = $this->artistModel->indexAllArtists();
             $errors = [];

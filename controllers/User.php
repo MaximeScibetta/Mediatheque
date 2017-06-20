@@ -7,7 +7,7 @@ use Models\Album as AlbumModel;
 use Models\Artist as ArtistModel;
 use Models\Label as LabelModel;
 
-class User extends Controller
+class User 
 {
     private $userModel = null;
     private $albumModel = null;

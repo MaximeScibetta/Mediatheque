@@ -6,7 +6,7 @@ use Models\Album as AlbumModel;
 use Models\Label as LabelModel;
 use Models\Artist as ArtistModel;
 
-class Album extends Controller
+class Album
 {
     private $albumModel = null;
     private $labelModel = null;
@@ -21,7 +21,6 @@ class Album extends Controller
 
     public function getAllAlbums()
     {
-        $this->checkLogin();
         if( $this->albumModel->indexAllAlbums() ){
             $albums = $this->albumModel->indexAllAlbums();
             $errors = [];
@@ -34,7 +33,6 @@ class Album extends Controller
 
     public function getInfos()
     {
-        $this->checkLogin();
         if( isset($_GET['id']) ){
             $albumId = $_GET['id'];
             $albumInfos = $this->albumModel->indexAlbumInfo($albumId);
@@ -47,7 +45,6 @@ class Album extends Controller
 
     public function getAddAlbum()
     {
-        $this->checkLogin();
         if( isset($_SESSION['user']) ){
             $labels = $this->labelModel->indexAllLabels();
             $artists = $this->artistModel->indexAllArtists();
@@ -57,7 +54,6 @@ class Album extends Controller
     }
     public function addMusic()
     {
-        $this->checkLogin();
         if( isset($_GET['addMusic']) ){
             $labels = $this->labelModel->indexAllLabels();
             $artists = $this->artistModel->indexAllArtists();

@@ -5,7 +5,7 @@ namespace Controllers;
 use Models\Label as LabelModel;
 use Models\Artist as ArtistModel;
 
-class Label extends Controller
+class Label
 {
     private $labelModel = null;
     private $artistModel = null;
@@ -17,7 +17,6 @@ class Label extends Controller
 
     public function getAllLabels()
     {
-        $this->checkLogin();
         if( $this->labelModel->indexAllLabels()){
             $labels = $this->labelModel->indexAllLabels();
             $errors = [];
@@ -30,7 +29,6 @@ class Label extends Controller
 
     public function getInfos()
     {
-        $this->checkLogin();
         if( isset($_GET['id']) ){
             $labelId = $_GET['id'];
             $labelInfos = $this->labelModel->indexLabelInfo($labelId);
