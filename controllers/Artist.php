@@ -33,7 +33,6 @@ class Artist
 
     public function getInfos()
     {
-        $this->checkLogin();
         if( isset($_GET['id']) ){
             $artistId = $_GET['id'];
             $artistInfos = $this->artistModel->indexArtistInfo($artistId);
