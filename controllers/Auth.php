@@ -19,7 +19,7 @@ class Auth
     public function getLogin()
     {
         if( isset($_SESSION['user']) ){
-            header('Location: http://maxime-scibetta.be'.$_SERVER['PHP_SELF'].'?a=getAllArtists&r=artist');
+            header('Location: http://homestead.app'.$_SERVER['PHP_SELF'].'?a=getAllArtists&r=artist');
         }
         return ['view' => 'views/userLogin.php'];
     }
@@ -62,14 +62,14 @@ class Auth
             );
         }
         session_destroy();
-        header('Location:http://maxime-scibetta.be'.$_SERVER['PHP_SELF']);
+        header('Location:http://homestead.app'.$_SERVER['PHP_SELF']);
         exit;
     }
 
     public function getInscription()
     {
         if( isset($_SESSION['user']) ){
-            header('Location: http://maxime-scibetta.be'.$_SERVER['PHP_SELF'].'?a=getAllArtists&r=artist');
+            header('Location: http://homestead.app'.$_SERVER['PHP_SELF'].'?a=getAllArtists&r=artist');
         }
         return ['view' => 'views/userInscription.php'];
     }
